@@ -1,0 +1,120 @@
+<body>
+	<p>
+		<h2>Revisiting Accessibility for 2017 Section 508 Compliance</h2>
+		<p>In 2017, the U.S. Governement revised the <a href="http://www.section508.gov/manage/laws-and-policies">IT
+				Accessibility Laws and Policies</a> requirements for section 508 Accessibily which
+			covers web browser based pages and applications.<br /><br />
+			<cite>In this final rule, the Access Board is updating its existing Electronic and Information Technology
+				Accessibility
+				Standards under section 508 of the Rehabilitation Act of 1973, ("508 Standards"), as well as our
+				Telecommunications
+				Act Accessibility Guidelines under Section 255 of the Communications Act of 1934 ("255 Guidelines").
+				Given the
+				passage of nearly two decades since their issuance, the existing 508 Standards and 255 Guidelines are in
+				need of a
+				"refresh" in several important respects. This final rule is intended to, among other things, address
+				advances in
+				information and communication technology that have occurred since the guidelines and standards were
+				issued in 1998
+				and 2000 respectively, harmonize with accessibility standards developed by standards organizations
+				worldwide in
+				recent years, and ensure consistency with the Board's regulations that have been promulgated since the
+				late 1990s.
+				The Revised 508 Standards and 255 Guidelines support the access needs of individuals with disabilities,
+				while also
+				taking into account the costs of providing accessible information and communication technology to
+				Federal agencies,
+				as well as manufacturers of telecommunications equipment and customer premises equipment.</cite>
+			<br>ref: <a
+				href="https://www.federalregister.gov/documents/2017/01/18/2017-00395/information-and-communication-technology-ict-standards-and-guidelines">Information
+				and Communication Technology (ICT) Standards and Guidelines</a>
+		</p>
+		<p>
+			The final rules governing the 508 Standards became effecting January 18, 2019 after more than a decade of <a
+				href="https://www.veterans.senate.gov/imo/media/doc/BVA%20Annual%20Testimony%202014.pdf">discussion and
+				public debate</a>. Government agencies such as the Department of Veterans are covered by the 508
+			Standards. Failure to comply can lead to significant penalties, ref: <a
+				href="https://getadaaccessible.com/ada-compliance-law-and-penalities/">reportedly</a> with fines up to
+			$55,000 for the first violation and $110,000 for each subsequent violation".
+		</p>
+		<p>
+			For web developers (as opposed to, for example, elevator builders), the key requirement is that someone who
+			is disabled can use the product. This can be done using the normal pages for the application or an alternate
+			interface. The <a
+				href="https://www.access-board.gov/guidelines-and-standards/communications-and-it/25-508-standards/720-questions-answers-about-section-508-of-the-rehabilitation-act-amendments-of-1998#19)">508
+				Standards define Accessibility</a>: "In general, an information technology system is accessible to
+			people with disabilities if it can be used in a variety of ways that do not depend on a single sense or
+			ability". The key requirements for web builders are to enable blind users to navigate the page and
+			effectively use the screen reader.</p>
+		<p>
+			The defacto standard screen reader technology in use today is <a
+				href="http://www.freedomscientific.com/products/software/jaws/">JAWS</a>, a paid prodcut from Freedom
+			scientific. Prior to 2019, JAWS had problems with most browsers except Firefox, so many blind users have
+			adopted JAWS with Firefox. In 2018, however, Firefox introduced the Quantum-based browser, and <a
+				href="http://blog.freedomscientific.com/firefoxesr/">this version would not work with older versions of
+				JAWS</a>. In 2019, JAWS was updated to work with Firefox Quantum. Thus, in 2019 the prefered screen
+			reader configuration is generally Microsoft Windows with JAWS 2019 and Firefox ESR 62+ (Quantum). Internet
+			Explorer 11 is often also required as some organizations prevent introduction of new software including
+			browsers; however, Microsoft has announced that Internet Explorer is adopting webkit so it is likely that
+			the JAWS implementation for Internet Explorer will change.
+		</p>
+		<p>
+			The final rule specifies that web sites and applications must follow the <a
+				href="https://www.w3.org/TR/WCAG20/">WCAG 2.0</a> standard from w3.org. Specifically the keyboard
+			accessibility protocols of the <a href="https://www.w3.org/WAI/standards-guidelines/aria/">WAI-ARIA, the
+				Accessible Rich Internet Applications suite of web standards (ARIA)</a> must be provided, including
+			maintaining a sensible tab order, adding section tags for navigation, and <a
+				href="https://www.w3.org/WAI/WCAG21/quickref/#keyboard-accessible">specifying "aria" tags and
+				properties</a> on the web page elements.
+		</p>
+		<p>
+			Implementers would follow practices of proper <a href="https://www.w3.org/TR/wai-aria/#usage">ARIA Usage</a>
+			including:
+			<pre>
+ARIA Roles: &lt;li role="menuitem"&gt;Open file... &lt;/l&gt;
+ARIA States and Properties: &lt;li role="menuitemcheckbox" aria-checked="true"&gt;Sort by Last Modified&lt;/li&gt;
+ARIA Styles: [aria-checked="true"] { font-weight: bold; }
+			 [aria-checked="true"]::before { background-image: url(checked.gif); }
+</pre>
+			Many websites such as <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">Mozilla</a>,
+			<a href="https://www.sitepoint.com/how-to-use-aria-effectively-with-html5/">SitePoint</a> and <a
+				href="https://developers.google.com/web/fundamentals/accessibility/semantics-aria/">Google</a> offer
+			tips and examples of enabling accessiblity using WP-ARIA.
+		</p>
+		<p>
+			With the laws in place from 2017 governing all U.S. Government software, and with similar requirements
+			adoped by many other governments and corporations, and because it is the right thing to do, the requirement
+			to implement accessibility protocols is imperative for all major software endeavors.
+		</p>
+		<p>
+			<ul>
+				<li><a
+						href="https://www.federalregister.gov/documents/2017/01/18/2017-00395/information-and-communication-technology-ict-standards-and-guidelines">Information
+						and Communication Technology (ICT) Standards and Guidelines</a></li>
+				<li><a
+						href="https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-ict-refresh/final-rule">Information
+						and Communication Technology (ICT) Final Standards and Guidelines (Final Rule)</a></li>
+				<li><a
+						href="https://www.access-board.gov/guidelines-and-standards/communications-and-it/25-508-standards/720-questions-answers-about-section-508-of-the-rehabilitation-act-amendments-of-1998#19)">508
+						Standards Q&A</a></li>
+				<li><a href="https://www.veterans.senate.gov/imo/media/doc/BVA%20Annual%20Testimony%202014.pdf">BLINDED
+						VETERANS ASSOCIATION
+						TESTIMONY...BEFORE A JOINT SESSION OF THE HOUSE AND SENATE COMMITTEES ON VETERANS AFFAIRS</a>
+				</li>
+				<li><a href="http://www.freedomscientific.com/products/software/jaws/">JAWS Screen Reader</a></li>
+				<li><a href="http://blog.freedomscientific.com/firefoxesr/">Firefox Extended Support Release now
+						requires JAWS 2018 or newer</a></li>
+				<li><a href="https://www.w3.org/WAI/WCAG20">WCAG 2.0</a></li>
+				<li><a href="https://www.w3.org/WAI/standards-guidelines/aria/">W3 WAI-ARIA, the Accessible Rich
+						Internet Applications suite of web standards (ARIA)</a></li>
+				<li><a href="https://www.w3.org/WAI/WCAG21/quickref/#keyboard-accessible">WCAG 2.0 Keyboard
+						Accessibility</a></li>
+				<li><a href="https://www.w3.org/TR/wai-aria/#usage">ARIA Usage</a></li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">Mozilla Aria</a></li>
+				<li><a href="https://www.sitepoint.com/how-to-use-aria-effectively-with-html5/">SitePoint Aria
+						Tutorial</a></li>
+				<li><a href="https://developers.google.com/web/fundamentals/accessibility/semantics-aria/">Google
+						Aria</a></li>
+			</ul>
+		</p><br /><br /><br />
+		<sub>by Lawrence Smith< April 25, 2019/sub> </body>
